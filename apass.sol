@@ -155,6 +155,4 @@ contract AlphaNft is Ownable, ERC721A, ReentrancyGuard {
         require(success1, "Transfer failed.");
     }
 
-
-
 }
