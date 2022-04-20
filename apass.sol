@@ -10,17 +10,17 @@ contract AlphaNft is Ownable, ERC721A, ReentrancyGuard {
     uint256 public immutable maxQty = 1024;
     uint256 public _tokensReserved;
     uint256 public _mintPrice;
-    uint256 public immutable maxMintPerAddr = 2;
+    uint256 public immutable maxMintPerAddr = 1;
     string private _baseTokenURI;
 
     //sale stages:
-    //stage 0: init(no minting, only reserve)mint 24
+    //stage 0: init(no minting, only reserve)
     //stage 1: whitelist mint+ public mint
     //stage 2: whitelist mint + team mint + public mint
     //stage 3: only reserve
     uint8 public _stage = 0;
-    uint256 public immutable maxQtyStage1 = 300;
-    uint256 public immutable maxQtyStage2 = 700;
+    uint256 public immutable maxQtyStage1 = 200;
+    uint256 public immutable maxQtyStage2 = 800;
     uint256 public _tokensMintedStage1 = 0;
     uint256 public _tokensMintedStage2 = 0;
     bool public _isPublicMintOpen = false;
